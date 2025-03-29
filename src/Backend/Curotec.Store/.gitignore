@@ -1,0 +1,115 @@
+# Build results
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Visual Studio for Mac
+.vscode/
+*.userprefs
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# MSTest
+TestResults/
+*.vspx
+*.vspscc
+
+# NUnit
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+
+# Build outputs
+*.dll
+*.exe
+*.app
+*.apk
+*.xap
+*.lib
+*.dylib
+*.so
+*.a
+
+# Publish
+.publish/
+out/
+artifacts/
+AppPackages/
+
+# Azure Functions artifacts
+.local.settings.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# dotnet CLI
+project.assets.json
+project.lock.json
+*.deps.json
+
+# Logs
+*.log
+*.tlog
+
+# Temporary files
+~$*
+*.tmp
+*.bak
+*.swp
+
+# Others
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+*.orig
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# VS Code directories
+.vscode/
+*.code-workspace
+
+# Rider directories
+.idea/
+
+# Mac OS
+.DS_Store
+
+# Linux
+*~
+
+# JetBrains Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
