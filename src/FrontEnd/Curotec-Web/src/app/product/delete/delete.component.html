@@ -1,0 +1,53 @@
+<div class="container main-container">
+  <h4>Excluir {{ product.name }}</h4>
+  <br />
+  <h5>Você tem certeza disso?</h5>
+
+  <div class="row">
+    <div class="col-md-10">
+      <dl>
+        <dt>Fornecedor</dt>
+        <dd>
+          {{ product.nameContractor }}
+        </dd>
+        <dt>Nome</dt>
+        <dd>
+          {{ product.name }}
+        </dd>
+        <dt>Descrição</dt>
+        <dd>
+          {{ product.description }}
+        </dd>
+        <dt>Valor</dt>
+        <dd>
+          {{ product.value }}
+        </dd>
+        <dt>CreateAt</dt>
+        <dd>
+          {{ product.CreatedAt }}
+        </dd>
+        <dt>Ativo?</dt>
+        <dd>
+          <input
+            [checked]="product.active"
+            class="check-box"
+            disabled="disabled"
+            type="checkbox"
+          />
+        </dd>
+      </dl>
+
+      <div>
+        <a
+          (click)="excluirProduto()"
+          href="javascript:void(0)"
+          class="btn btn-danger"
+          >Delete</a
+        >&nbsp;
+        <a class="btn btn-info" href="javascript:window.history.back();"
+          >back</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

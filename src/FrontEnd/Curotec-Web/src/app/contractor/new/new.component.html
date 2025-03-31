@@ -1,0 +1,172 @@
+<div class="container main-container">
+  <h1>New Contractor</h1>
+
+  <hr />
+  <div class="row">
+    <div class="col-md-10">
+      <form
+        novalidate="novalidate"
+        (ngSubmit)="addContractor()"
+        [formGroup]="contractorForm"
+      >
+        <div class="alert alert-danger" *ngIf="errors.length > 0">
+          <h3 id="msgRetorno">Oops! Something went wrong:</h3>
+          <ul>
+            <li *ngFor="let error of errors">{{ error }}</li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Name</label>
+          <div>
+            <input
+              class="form-control"
+              id="nome"
+              type="text"
+              placeholder="Name (required)"
+              formControlName="nome"
+              [ngClass]="{ 'is-invalid': displayMessage['nome'] }"
+            />
+            <span class="text-danger" *ngIf="displayMessage['nome']">
+              <p [innerHTML]="displayMessage['nome']"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label">Document</label>
+          <div>
+            <input
+              class="form-control"
+              id="documento"
+              type="text"
+              placeholder="{{ documentText }}"
+              formControlName="documento"
+              [ngClass]="{ 'is-invalid': displayMessage['document'] }"
+            />
+            <span class="text-danger" *ngIf="displayMessage['document']">
+              <p [innerHTML]="displayMessage['document']"></p>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="ativo"
+              formControlName="ativo"
+              name="ativo"
+              value="true"
+            />
+            Active?
+          </label>
+        </div>
+
+        <h4>Address</h4>
+        <hr />
+        <div formGroupName="endereco">
+          <div class="form-group">
+            <label class="control-label">ZIP Code</label>
+            <div>
+              <input
+                class="form-control"
+                id="cep"
+                type="text"
+                placeholder="ZIP Code (required)"
+                formControlName="cep"
+                cep
+                [ngClass]="{ 'is-invalid': displayMessage['zipcode'] }"
+              />
+              <span class="text-danger" *ngIf="displayMessage['zipcode']">
+                <p [innerHTML]="displayMessage['zipcode']"></p>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Address1</label>
+            <div>
+              <input
+                class="form-control"
+                id="address1"
+                type="text"
+                placeholder="Street (required)"
+                formControlName="address1"
+                [ngClass]="{ 'is-invalid': displayMessage['address1'] }"
+              />
+              <span class="text-danger" *ngIf="displayMessage['address1']">
+                <p [innerHTML]="displayMessage['address1']"></p>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Address2</label>
+            <div>
+              <input
+                class="form-control"
+                id="address2"
+                type="text"
+                placeholder="Number (required)"
+                formControlName="address2"
+                [ngClass]="{ 'is-invalid': displayMessage['address2'] }"
+              />
+              <span class="text-danger" *ngIf="displayMessage['address2']">
+                <p [innerHTML]="displayMessage['address2']"></p>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">City</label>
+            <div>
+              <input
+                class="form-control"
+                id="cidade"
+                type="text"
+                placeholder="City (required)"
+                formControlName="cidade"
+                [ngClass]="{ 'is-invalid': displayMessage['city'] }"
+              />
+              <span class="text-danger" *ngIf="displayMessage['city']">
+                <p [innerHTML]="displayMessage['city']"></p>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label">State</label>
+            <div>
+              <input
+                class="form-control"
+                id="state"
+                type="text"
+                placeholder="State (required)"
+                formControlName="state"
+                [ngClass]="{ 'is-invalid': displayMessage['state'] }"
+              />
+              <span class="text-danger" *ngIf="displayMessage['state']">
+                <p [innerHTML]="displayMessage['state']"></p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit" class="btn btn-primary" />&nbsp;
+          <a class="btn btn-info" [routerLink]="['/contractors/list-all']"
+            >Back</a
+          >
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-2">
+            <p>Form valid: {{ contractorForm.valid }}</p>
+            <p>Form touched: {{ contractorForm.touched }}</p>
+            <p>Form dirty: {{ contractorForm.dirty }}</p>
+            <br />
+            <p>Form data: {{ formResult }}</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

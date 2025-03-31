@@ -1,0 +1,54 @@
+<div class="container main-container">
+  <h4>Excluir {{ product.name }}</h4>
+  <br />
+  <h5>Você tem certeza disso?</h5>
+
+  <div class="row">
+    <div class="col-md-10">
+      <dl>
+        <dt>Contractor</dt>
+        <dd>
+          {{ product.nomeFornecedor }}
+        </dd>
+        <dt>Name</dt>
+        <dd>
+          {{ product.nome }}
+        </dd>
+        <dt>Description</dt>
+        <dd>
+          {{ product.descricao }}
+        </dd>
+        <dt>Value</dt>
+        <dd>
+          {{ product.valor }}
+        </dd>
+        <dt>Created At</dt>
+        <dd>
+          {{ product.dataCadastro }}
+        </dd>
+        <dt>Active?</dt>
+        <dd>
+          <input
+            [checked]="product.ativo"
+            class="check-box"
+            disabled="disabled"
+            type="checkbox"
+          />
+        </dd>
+      </dl>
+
+      <div>
+        <a
+          class="btn btn-warning"
+          [routerLink]="['/products/edit', product.id]"
+        >
+          Edit
+        </a>
+        &nbsp;
+        <a class="btn btn-info" href="javascript:window.history.back();">
+          Voltar
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

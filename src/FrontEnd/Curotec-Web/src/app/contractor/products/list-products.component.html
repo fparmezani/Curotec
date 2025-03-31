@@ -1,0 +1,52 @@
+<hr />
+<h4>Products</h4>
+
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Contractor</th>
+      <th>Price</th>
+      <th>Active?</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>
+        {{ product.name }}
+      </td>
+      <td>
+        {{ product.nameContractor }}
+      </td>
+      <td>
+        {{ product.value }}
+      </td>
+      <td>
+        <input
+          [checked]="product.active"
+          class="check-box"
+          disabled="disabled"
+          type="checkbox"
+        />
+      </td>
+      <td class="text-right">
+        <a
+          class="btn btn-warning"
+          [routerLink]="['/products/details', product.id]"
+        >
+          <span class="fa fa-search"></span> </a
+        >&nbsp;
+        <a class="btn btn-info" [routerLink]="['/products/edit', product.id]">
+          <span class="fa fa-pencil-alt"></span> </a
+        >&nbsp;
+        <a
+          class="btn btn-danger"
+          [routerLink]="['/products/delete', product.id]"
+        >
+          <span class="fa fa-trash"></span>
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
