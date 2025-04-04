@@ -59,7 +59,7 @@ dotnet run
 
 ### Technologies
 
-- Angular 14+
+- Angular 16+
 - TypeScript
 - Bootstrap / SCSS
 - HTTP Client integration with API
