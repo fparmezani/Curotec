@@ -126,4 +126,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-Developed by [Your Name] — feel free to get in touch!
+Developed by Fernando Parmezani dos Reis — feel free to get in touch!
